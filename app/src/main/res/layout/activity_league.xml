@@ -18,7 +18,8 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.0"
-      app:srcCompat="@drawable/desiredleaguebg" />
+      app:srcCompat="@drawable/desiredleaguebg"
+      android:contentDescription="@string/background_image" />
 
   <ImageView
       android:id="@+id/logo"
@@ -28,7 +29,8 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/swooshlogo" />
+      app:srcCompat="@drawable/swooshlogo"
+      android:contentDescription="@string/app_logo_image" />
 
   <TextView
       android:id="@+id/leagueRquestTxt"
@@ -46,10 +48,8 @@
 
   <Button
       android:id="@+id/button4"
-      android:layout_width="0dp"
+      android:layout_width="320dp"
       android:layout_height="65dp"
-      android:layout_marginStart="16dp"
-      android:layout_marginEnd="16dp"
       android:layout_marginBottom="16dp"
       android:background="@drawable/swoosh_button"
       android:fontFamily="@font/montserrat"
@@ -61,11 +61,9 @@
       app:layout_constraintStart_toStartOf="parent" />
 
   <LinearLayout
-      android:layout_width="0dp"
+      android:layout_width="320dp"
       android:layout_height="wrap_content"
-      android:layout_marginStart="16dp"
       android:layout_marginTop="60dp"
-      android:layout_marginEnd="16dp"
       android:orientation="vertical"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
