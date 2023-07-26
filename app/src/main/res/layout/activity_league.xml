@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LeagueActivity">
@@ -11,6 +10,7 @@
       android:id="@+id/bgLeague"
       android:layout_width="0dp"
       android:layout_height="0dp"
+      android:contentDescription="@string/background_image"
       android:scaleType="centerCrop"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
@@ -18,19 +18,18 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.0"
-      app:srcCompat="@drawable/desiredleaguebg"
-      android:contentDescription="@string/background_image" />
+      app:srcCompat="@drawable/desiredleaguebg" />
 
   <ImageView
       android:id="@+id/logo"
       android:layout_width="124dp"
       android:layout_height="35dp"
       android:layout_marginTop="24dp"
+      android:contentDescription="@string/app_logo_image"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/swooshlogo"
-      android:contentDescription="@string/app_logo_image" />
+      app:srcCompat="@drawable/swooshlogo" />
 
   <TextView
       android:id="@+id/leagueRquestTxt"
@@ -47,17 +46,19 @@
       app:layout_constraintTop_toBottomOf="@+id/logo" />
 
   <Button
-      android:id="@+id/button4"
+      android:id="@+id/leagueNextBtn"
       android:layout_width="320dp"
       android:layout_height="65dp"
       android:layout_marginBottom="16dp"
       android:background="@drawable/swoosh_button"
       android:fontFamily="@font/montserrat"
+      android:onClick="leagueNextClicked"
       android:text="@string/next"
       android:textColor="#FFFFFF"
       android:textSize="24sp"
-      app:layout_constraintBottom_toBottomOf="@+id/bgLeague"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.494"
       app:layout_constraintStart_toStartOf="parent" />
 
   <LinearLayout

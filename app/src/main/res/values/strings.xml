@@ -11,4 +11,8 @@
     <string name="next">Next</string>
     <string name="background_image">backgroundImage</string>
     <string name="app_logo_image">app logo Image</string>
+    <string name="i_am_a">I am a:</string>
+    <string name="finish">Finish</string>
+    <string name="beginner">Beginner</string>
+    <string name="baller">Baller</string>
 </resources>
