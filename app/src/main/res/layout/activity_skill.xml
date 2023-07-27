@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".controller.SkillActivity">
 
     <ImageView
         android:id="@+id/skillBg"
@@ -53,6 +53,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
+        android:onClick="onFinishClicked"
         android:text="@string/finish"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -80,6 +81,7 @@
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onBeginnerClicked"
             android:text="@string/beginner"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
@@ -95,6 +97,7 @@
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onBallerClicked"
             android:text="@string/baller"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
