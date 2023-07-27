@@ -6,39 +6,37 @@ import android.view.View
 import android.widget.Toast
 import android.widget.ToggleButton
 import com.nabilbdev.swoosh.R
-import com.nabilbdev.swoosh.utilities.EXTRA_LEAGUE
-import com.nabilbdev.swoosh.utilities.EXTRA_SKILL
+import com.nabilbdev.swoosh.model.Player
+import com.nabilbdev.swoosh.utilities.EXTRA_PLAYER
 
 class SkillActivity : BaseActivity() {
 
-    private var league = ""
-    private var selectedSkill = ""
+    lateinit var player: Player
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        league = intent.getStringExtra(EXTRA_LEAGUE).toString()
+        player = intent.getParcelableExtra(EXTRA_PLAYER)!!
     }
 
     fun onBeginnerClicked(view: View) {
         val ballerButton = findViewById<ToggleButton>(R.id.BallerBtn)
         ballerButton.isChecked = false
 
-        selectedSkill = "beginner"
+        player.skill = "beginner"
     }
 
     fun onBallerClicked(view: View) {
         val beginnerButton = findViewById<ToggleButton>(R.id.beginnerBtn)
         beginnerButton.isChecked = false
 
-        selectedSkill = "baller"
+        player.skill = "baller"
     }
 
     fun onFinishClicked(view: View) {
-        if (selectedSkill != "") {
+        if (player.skill != "") {
             val finishIntent = Intent(this, FinishActivity::class.java)
-            finishIntent.putExtra(EXTRA_LEAGUE, league)
-            finishIntent.putExtra(EXTRA_SKILL, selectedSkill)
+            finishIntent.putExtra(EXTRA_PLAYER, player)
             startActivity(finishIntent)
         } else {
             Toast.makeText(this, "Please select a skill level", Toast.LENGTH_SHORT).show()
